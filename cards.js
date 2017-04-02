@@ -1,17 +1,17 @@
-var banner = $(".banner");
-var firstNumber = $(".question");
-
+var banner = $(".banner"); 
+var qfiled = $(".question");
 var input  = $(".result")
 var submit = $("#submit");
-
-var right = ("You are correct!");
+var next = $("#next");
+var start = $("#start");
+var right = ("Correct!");
 var wrong = ("Try again!")
 
 
 var questions = {
-	a: 2 + 8, 
-	b: 5 + 3, 
-	c: 5 + 6,
+	a: "8 + 2 = ?", 
+	b: "5 + 3 = ?", 
+	c: "5 + 6 = ?",
 	d: 6 - 6,
 	f: 8 * 8
 
@@ -19,17 +19,55 @@ var questions = {
 //created questions 
 
 
- submit.on("click", function(){
-        updateBanner();
+ $("#1").on("click", function(){
+ 		
+       	qfiled.html(questions.c);
+        submit.on("click", function(){
+		var userInput = parseInt(input.val());
+		if (userInput === 11) {
+	 		banner.html(userInput +" is " + right);
+		} else {
+		banner.html(wrong);
+		}
+});
        
        });
 
-var updateBanner = function() {
-	// var userInput = parseInit(input.val());
-	var userInput = parseInt(input.val());
-	if (userInput === questions.a) {
-		banner.html(right);
-	} else {
+
+
+$("#2").on("click", function(){
+ 		// qfiled.html(questions.a);
+ 		banner.empty();
+        qfiled.html(questions.b);
+        submit.on("click", function(){
+		var userInput = parseInt(input.val());
+		if (userInput === 8) {
+	 		banner.html(userInput +" is " + right);
+		} else {
 		banner.html(wrong);
-	}
-}
+		}
+});
+       
+       });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
