@@ -3,6 +3,7 @@
 	border: 1px solid black;
 	margin: 0 auto;
     width: 500px;
+    background-color: #fce7d1;
     
 }
 
@@ -32,4 +33,13 @@ body {
 	text-align: center;
 	font-family: 'Kavoon', cursive;
 	font-weight: bold;
+	background-color: #8ca84f;
+}
+
+.banner {
+	margin: 20px;
+}
+
+header {
+	margin:30px;
 }
