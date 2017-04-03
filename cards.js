@@ -16,10 +16,7 @@ var questions = {
 	d: "I know a three positive numbers that will results the same when multiplied together or added together",
 	f: "A merchant can place 8 large boxes or 10 small boxes into a carton for shipping. In one shipment, he sent a total of 96 boxes. If there are more large boxes than small boxes, how many cartons did he ship?",
 	g: "How many times can you take away 2 from 100?",
-	h: "There are 2 mothers, 2daughters, 1 grandma and 1 grandaughter. How many people are there?"
-	
-
-
+	h: "There are 2 mothers, 2 daughters, 1 grandma and 1 grandaughter. How many people are there?"
 };
 
 
@@ -32,7 +29,7 @@ var questions = {
         submit.on("click", function(){
 		var userInput = parseInt(input.val());
 		if (userInput === 10) {
-	 		banner.html(userInput +" is " + right);
+	 		banner.text(userInput +" is " + right);
 		} else {
 		banner.html(wrong);
 		}
