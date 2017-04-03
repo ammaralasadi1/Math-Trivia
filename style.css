@@ -12,6 +12,7 @@ header {
 .container {
 border-radius: 50px;
 width: 800px;
+min-height: 870px;
 
 margin: 0 auto;
 border: 1px solid black;
@@ -38,7 +39,7 @@ background-color: #c3d7f7;
 	padding: 20px;
 }
 
-.b{
+.questionButton{
 	display: inline-block;
 	padding: 10px;
 	background-color: yellow;
@@ -59,7 +60,7 @@ background-color: #c3d7f7;
 
 }
 
-#submit, #show {
+#submit, #show, #start {
 	margin: 5px 0px 5px 0px;
 	padding: 10px;
 	background-color: yellow;
