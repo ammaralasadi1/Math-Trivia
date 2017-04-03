@@ -7,31 +7,33 @@ body {
 }
 
 header {
-	margin: 10px 0px 10px 0px;
+	margin: 5px 0px 5px 0px;
 }
 .container {
 border-radius: 50px;
 width: 800px;
+
 margin: 0 auto;
 border: 1px solid black;
 box-shadow: 10px 10px 5px #888888;
 background-color: #c3d7f7;
 }
 .banner {
-	margin: 10px 0px 10px 0px;
+	margin: 5px 0px 5px 0px;
 	min-height: 220px;
 	padding: 20px;
 	font-size: 2em;
+	color: red;
 }
 .question {
-	margin: 10px 0px 10px 0px;
+	margin: 5px 0px 5px 0px;
 	min-height: 220px;
 	padding: 20px;
 	font-size: 2em;
 }
 
 .qButton {
-	margin: 10px 0px 10px 0px;
+	margin: 5px 0px 5px 0px;
 	min-height: 30px;
 	padding: 20px;
 }
@@ -48,7 +50,7 @@ background-color: #c3d7f7;
 }
 
 .aButton {
-	margin: 10px 0px 10px 0px;
+	margin: 5px 0px 5px 0px;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
@@ -58,7 +60,7 @@ background-color: #c3d7f7;
 }
 
 #submit, #show {
-	margin: 10px 0px 10px 0px;
+	margin: 5px 0px 5px 0px;
 	padding: 10px;
 	background-color: yellow;
 	font-size: 1em;
