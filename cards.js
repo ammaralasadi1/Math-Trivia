@@ -1,9 +1,3 @@
-
-
-
-
-
-
 var banner = $(".banner"); 
 var qfiled = $(".question");
 var input  = $("#result")
@@ -13,60 +7,50 @@ var start = $("#start");
 var right = ("Correct!");
 var wrong = ("Try again!")
 var show = $("#show");
-var invalidMessage;  
 
-var q_and_a = {
-
-	a: {question: "8 + 2 = ?", answer: function(raw) { var value= parseInt(raw); if (value === 10) return true; else return false; }}  
-	,b: {question: "5 + 3 = ?", answer: function(raw) { var value = parseInt(raw); if (value === 8) return true; else return false; } }  
-	,c: {question: "6 - 6 + 6 / 6 = ?", answer: function(raw) {var value = parseInt(raw); if (value ===1) return true; else return false;}}
-	,d: {question: "Give me 3 positive numbers that will result the same when multiplied together or added together", answer: function(raw) {
-			var rawNumbers = raw.match(/\d+/g); //regex
-			if (rawNumbers.length != 3) {
-				invalidMessage = 'Please enter 3 numbers separated by a space';
-				return -1; 
-			}
-			var numbers = []; 
-			rawNumbers.forEach(function(x) { numbers.push(parseInt(x)) }); 
-			var added = numbers[0]+numbers[1]+numbers[2];
-			var multiplied = numbers[0]*numbers[1]*numbers[2]; 
-			if (added === multiplied) { return true;}
-			else return false; 
-			} 
-		}
-	//,e: "A merchant can place 8 large boxes or 10 small boxes into a carton for shipping. In one shipment, he sent a total of 96 boxes. If there are more large boxes than small boxes, how many cartons did he ship?",
-	//,f: "How many times can you take away 2 from 100?",
-	//,g: "There are 2 mothers, 2 daughters, 1 grandma and 1 grandaughter. How many people are there?"
+var questions = {
+	a: "8 + 2 = ?", 
+	b: "5 + 3 = ?", 
+	c: "6 - 6 + 6 / 6 = ?",
+	d: "I know a three positive numbers that will results the same when multiplied together or added together",
+	f: "A merchant can place 8 large boxes or 10 small boxes into a carton for shipping. In one shipment, he sent a total of 96 boxes. If there are more large boxes than small boxes, how many cartons did he ship?",
+	g: "How many times can you take away 2 from 100?",
+	h: "There are 2 mothers, 2 daughters, 1 grandma and 1 grandaughter. How many people are there?"
 };
-
-var currentAnswer; 
-$(".questionButton").on('click', function() {
-
-	var id = this.id;
-	$("#questionText").text(q_and_a[id].question);  
-	currentAnswer = q_and_a[id].answer; 
-});
-$("#submit").on('click', function() {
-
-	var raw = input.val();
-	var result = currentAnswer(raw);   
-	if (result == 1) {  
-		banner.text(raw + " is Correct!"); 
-	}
-	else if (result == 0) {
-		banner.text(raw + " is wrong!"); 
-	}
-	else if (result == -1) {
-		banner.text(invalidMessage); 
-	}
-
-});
-
-
 
 
 //created questions 
 
+
+ $("#1").on("click", function(){
+ 		
+       	qfiled.html(questions.a);
+        submit.on("click", function(){
+		var userInput = parseInt(input.val());
+		if (userInput === 10) {
+	 		banner.text(userInput +" is " + right);
+		} else {
+		banner.html(wrong);
+		}
+});
+       
+       });
+
+
+
+$("#2").on("click", function(){
+ 		banner.empty();
+        qfiled.html(questions.b);
+        submit.on("click", function(){
+		var userInput = parseInt(input.val());
+		if (userInput === 8) {
+	 		banner.html(userInput +" is " + right);
+		} else {
+		banner.html(wrong);
+		}
+});
+       
+       });
 
 
 $("#3").on("click", function(){
@@ -93,7 +77,7 @@ $("#4").on("click", function(){
 		})
         submit.on("click", function(){
 		var userInput = (input.val());
-		if (userInput === "123") {
+		if (userInput === "1 2 3") {
 	 		banner.html(userInput +" is " + right);
 		} else {
 		banner.html(wrong);
@@ -162,14 +146,6 @@ $("#7").on("click", function(){
 });
        
        });
-
-
-
-
-
-
-
-
 
 
 
