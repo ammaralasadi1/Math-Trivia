@@ -2,12 +2,11 @@ var banner = $(".banner");
 var qfield = $(".question");
 var input  = $("#result")
 var submit = $("#submit");
-var next = $("#next");
 var start = $("#start");
 var right = ("Correct!");
 var wrong = ("Try again!")
 var show = $("#show");
-var start = $("#start");
+var questionButton = $(".questionButton");
 var score = [];
 var q_and_a = {
 
@@ -20,40 +19,67 @@ var q_and_a = {
 	,g: {question:"There are 2 mothers, 2 daughters, 1 grandma and 1 grandaughter. How many people are there?", answer: 3, hint:"3 people. one mother is the mother of another daughter. (2 mothers) another mother's child and her child. (2 daughters). 1grandma the oldest one there. 1 grandaughter the smallest."}
 };
 
-function updateScore() {
-	score.push("1");
-	// alert(score);
-	input.val(" ");
-	$(".scorepad").text("You scored " + (score.length) + " out of 7");
+
+
+$(document).ready(function() {		//Hides Buttons and Show start.
+	questionButton.hide();
+	show.hide();
+	submit.hide();
+	input.hide();
+	start.fadeIn(slow);
+});
+	
+	start.on("click", function () { // Shows Question buttons
+		questionButton.fadeIn();
+		show.fadeIn();
+		submit.fadeIn();
+		input.fadeIn();
+		start.hide(slow);
+	});	
+
+
+	
+	function updateScore() { //A function to update the score
+		score.push("1");
+		input.val(" ");
+		$(".scorepad").text("Your score: " + (score.length) + " out of 7");
 
 };
 
- $(".questionButton").on('click', function() {
+ 	$(".questionButton").on('click', function() { //Pulls Q, A and Hint and validates the answer. 
 
-	var id = this.id;
+		var id = this.id;
+			let answered = false
+
+			banner.empty()
+				qfield.text(q_and_a[id].question); 
+
+					$("#submit").on('click', function() {
+
+						var userInput = parseInt(input.val());
 
 
-	banner.empty()
-	qfield.text(q_and_a[id].question); 
+							if (userInput === q_and_a[id].answer ) {
 
-	$("#submit").on('click', function() {
-
-	var userInput = parseInt(input.val());
-
-	if (userInput === q_and_a[id].answer ) {
-
-		banner.text(userInput + " is " + right);
-		updateScore();
+								banner.text(userInput + " is " + right);
+									updateScore();
 		
-		} else {
-		return banner.text(wrong);
+							} else {
+								return banner.text(wrong);
 	}
 });
-	show.on("click", function(){
-		return banner.text(q_and_a [id].hint);
+	
+	
+					// Show hint to the question. 
+	show.on("click", function(){     
+		return banner.text("Answer: " + q_and_a [id].hint);
 	})
 });
 
+
+
+
+    
 
 
 

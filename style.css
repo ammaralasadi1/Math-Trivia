@@ -1,29 +1,26 @@
 body {
-
-	
 	text-align: center;
 	font-family: 'Merriweather', serif;
 	font-size: 1em;
-
+	background-color: #b9fff6;
 }
 
 header {
 	margin: 5px 0px 5px 0px;
 }
 .container {
-border-radius: 50px;
-width: 800px;
-min-height: 500px;
-max-height: 501px;
-
-margin: 0 auto;
-border: 1px solid black;
-box-shadow: 10px 10px 5px #888888;
-background-color: #c3d7f7;
+	border-radius: 50px;
+	width: 800px;
+	min-height: 500px;
+	max-height: 501px;
+	margin: 0 auto;
+	border: 1px solid black;
+	box-shadow: 10px 10px 5px #888888;
+	background-color: #4dffa9
 }
+
 .banner {
 	margin: 5px 0px 5px 0px;
-	/*min-height: 220px;*/
 	padding: 20px;
 	font-size: 2em;
 	color: red;
@@ -31,7 +28,7 @@ background-color: #c3d7f7;
 .scorepad {
 	padding: 20px;
 	font-size: 2em;
-	color: green;
+	color: black;
 
 }
 .question {
@@ -51,7 +48,7 @@ background-color: #c3d7f7;
 .questionButton{
 	display: inline-block;
 	padding: 10px;
-	background-color: yellow;
+	background-color: #ffffcc;
 	font-size: 1em;
 	border-radius: 20px;
 	width: 40px;
@@ -63,29 +60,27 @@ background-color: #c3d7f7;
 	margin: 5px 0px 5px 0px;
 	padding: 20px;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-
+	flex-direction: row;
+	justify-content: center;
 
 }
 
 #submit, #show, #start {
-	margin: 5px 0px 5px 0px;
+	margin: 0 auto;
 	padding: 10px;
-	background-color: yellow;
+	background-color: #ffffcc;
 	font-size: 1em;
 	border-radius: 20px;
 	width: 100px;
 	height: 15px;
 	box-shadow: 5px 5px 5px #888888;
-	
 }
 
 #result {
 	display: inline-block;
 
 	width: 30%;
-    background-color: #4CAF50;
+    background-color: #4dffa9
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -104,14 +99,31 @@ background-color: #c3d7f7;
 
 .score {
 	box-shadow: 10px 10px 5px #888888;
+
 	width: 800px;
 	height: 300px;
 	border: 1px solid black;
 	margin: 20px;
 	border-radius: 50px;
 	align-content: center;
+	background-color: #4dffa9
 
 
 }
+
+ #start:hover {
+background: #6666ff;
+}
+
+#show:hover {
+background: #6666ff;
+}
+#submit:hover {
+background: #6666ff;
+}
+.questionButton:hover {
+background: #6666ff;
+}
+
 
 
