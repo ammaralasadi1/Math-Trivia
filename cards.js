@@ -1,6 +1,3 @@
-
-
-
 var banner = $(".banner"); 
 var qfield = $(".question");
 var input  = $("#result")
@@ -27,7 +24,7 @@ function updateScore() {
 	score.push("1");
 	// alert(score);
 	input.val(" ");
-	$('header').text("You scored " + (score.length) + " out of 7");
+	$(".scorepad").text("You scored " + (score.length) + " out of 7");
 
 };
 
@@ -48,19 +45,15 @@ function updateScore() {
 		banner.text(userInput + " is " + right);
 		updateScore();
 		
-		
-
-	} else {
+		} else {
 		return banner.text(wrong);
 	}
 });
 	show.on("click", function(){
 		return banner.text(q_and_a [id].hint);
 	})
-
-
-
 });
+
 
 
 
