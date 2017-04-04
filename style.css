@@ -83,4 +83,9 @@ background-color: #c3d7f7;
     cursor: pointer;
 }
 
+.con_board {
+	display: flex;
+	flex-direction: row;
+}
+
 

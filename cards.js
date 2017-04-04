@@ -12,9 +12,6 @@ var wrong = ("Try again!")
 var show = $("#show");
 var start = $("#start");
 var score = [];
-
-  
-
 var q_and_a = {
 
 	a: {question: "8 + 2 = ?", answer: 10, hint: "10"}  
@@ -26,9 +23,15 @@ var q_and_a = {
 	,g: {question:"There are 2 mothers, 2 daughters, 1 grandma and 1 grandaughter. How many people are there?", answer: 3, hint:"3 people. one mother is the mother of another daughter. (2 mothers) another mother's child and her child. (2 daughters). 1grandma the oldest one there. 1 grandaughter the smallest."}
 };
 
+function updateScore() {
+	score.push("1");
+	// alert(score);
+	input.val(" ");
+	$('header').text("You scored " + (score.length) + " out of 7");
 
+};
 
-$(".questionButton").on('click', function() {
+ $(".questionButton").on('click', function() {
 
 	var id = this.id;
 
@@ -42,10 +45,10 @@ $(".questionButton").on('click', function() {
 
 	if (userInput === q_and_a[id].answer ) {
 
-
-			
-	
-		return banner.text(userInput + " is " + right);
+		banner.text(userInput + " is " + right);
+		updateScore();
+		
+		
 
 	} else {
 		return banner.text(wrong);
@@ -55,11 +58,11 @@ $(".questionButton").on('click', function() {
 		return banner.text(q_and_a [id].hint);
 	})
 
+
+
 });
 
-// var updateScore = function () {
-// 	scrore.push("1");
-// }
+
 
 
 
