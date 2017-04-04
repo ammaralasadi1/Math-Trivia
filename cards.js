@@ -8,6 +8,7 @@ var wrong = ("Try again!")
 var show = $("#show");
 var questionButton = $(".questionButton");
 var score = [];
+var questionsAnswered = [];
 var q_and_a = {
 
 	a: {question: "8 + 2 = ?", answer: 10, hint: "10"}  
@@ -22,6 +23,7 @@ var q_and_a = {
 
 
 $(document).ready(function() {		//Hides Buttons and Show start.
+	$(".score").hide();
 	questionButton.hide();
 	show.hide();
 	submit.hide();
@@ -30,6 +32,7 @@ $(document).ready(function() {		//Hides Buttons and Show start.
 });
 	
 	start.on("click", function () { // Shows Question buttons
+		$(".score").fadeIn(300);
 		questionButton.fadeIn();
 		show.fadeIn();
 		submit.fadeIn();
@@ -62,11 +65,15 @@ $(document).ready(function() {		//Hides Buttons and Show start.
 							if (userInput === q_and_a[id].answer ) {
 
 								banner.text(userInput + " is " + right);
+								if(!questionsAnswered.includes(id)) {
 									updateScore();
-		
+								}
+
+								questionsAnswered.push(id)
+
 							} else {
 								return banner.text(wrong);
-	}
+							}
 });
 	
 	
