@@ -10,7 +10,6 @@ header {
 	font-size: 2em;
 	font-family: 'Freckle Face', cursive;
 	text-shadow: white 1px 1px;
-	
 }
 .container {
 	width: 1000px;
@@ -79,13 +78,16 @@ header {
 #submit, #show, #start, #reset, #next {
 	margin: 0 auto;
 	padding: 10px;
-	background-color:#66ff99;
+	background-color:#cc8500;
 	color: black;
 	font-size: 1em;
 	border-radius: 20px;
 	width: 100px;
 	height: 15px;
-	box-shadow: 5px 5px 5px #888888;
+	/*box-shadow: 2px 2px 2px #888888;*/
+}
+#submit{
+	background: green;
 }
 #result {
 	display: inline-block;
@@ -138,12 +140,13 @@ background:#00FF00;
 background:#00FF00;
 }
 
-/*.red{
-	color:red;
+footer {
+	margin: 5px 0px 5px 0px;
+	font-size: 2em;
+	font-family: 'Freckle Face', cursive;
+	text-shadow: white 1px 1px;
+	color: red;
 }
-.blue {
-    color: blue;
-}*/
 
 
 

@@ -8,7 +8,6 @@ var reset = $("#reset")
 var questionButton = $(".questionButton");
 var scoreDisplay = $(".scorepad");
 
-
 var score = localStorage.score;
 if (score) score = parseInt(score); else score =0;
 var questionsAnswered = localStorage.questionsAnswered;
