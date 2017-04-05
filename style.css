@@ -1,35 +1,37 @@
 body {
 	text-align: center;
-	font-family: 'Merriweather', serif;
+	font-family: 'Freckle Face', cursive;
 	font-size: 1em;
-	background-color: #b9fff6;
+	background-color: #333333;
+	color: #ff0000;
 }
 
 header {
 	margin: 5px 0px 5px 0px;
 	font-size: 20px;
+	color: white;
 }
 .container {
-	border-radius: 50px;
+	
 	width: 800px;
 	min-height: 500px;
 	max-height: 501px;
 	margin: 0 auto;
-	border: 1px solid black;
-	box-shadow: 10px 10px 5px #888888;
-	background-color: #4dffa9
+	/*border: 1px solid black;*/
+	/*box-shadow: 10px 10px 5px #888888;*/
+	background-color: #0033cc
 }
 
 .banner {
 	margin: 5px 0px 5px 0px;
 	padding: 20px;
-	font-size: 2em;
-	color: red;
+	font-size: 3em;
+	color: #ff0000;
 }
 .scorepad {
 	padding: 20px;
 	font-size: 2em;
-	color: blue;
+	/*color: white*/
 
 }
 .question {
@@ -37,6 +39,7 @@ header {
 	min-height: 220px;
 	padding: 20px;
 	font-size: 2em;
+	/*color: white;*/
 
 }
 
@@ -52,7 +55,7 @@ header {
 	background-color: #ffffcc;
 	font-size: 1em;
 	border-radius: 20px;
-	width: 40px;
+	width: 60px;
 	height: 15px;
 	box-shadow: 5px 5px 5px #888888;
 }
@@ -66,7 +69,7 @@ header {
 
 }
 
-#submit, #show, #start {
+#submit, #show, #start, #reset{
 	margin: 0 auto;
 	padding: 10px;
 	background-color: #ffffcc;
@@ -99,15 +102,15 @@ header {
 }
 
 .score {
-	box-shadow: 10px 10px 5px #888888;
+	/*box-shadow: 10px 10px 5px #888888;*/
 
 	width: 800px;
 	height: 300px;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	margin: 20px;
-	border-radius: 50px;
+	/*border-radius: 50px;*/
 	align-content: center;
-	background-color: #4dffa9
+	background-color: #0033cc
 
 
 }
