@@ -31,7 +31,7 @@ var currentHint;
 
 input.keypress(function(event) { // 
     if (event.which == 13) {
-       event.preventDefault(); 
+		event.preventDefault();
         onSubmit(); 
     }
 });
@@ -46,6 +46,7 @@ function update(id) { //A function to update the score
 };
 
 $('#next').click(function() {
+	qfield.addClass("red");
 	banner.empty();
 	questionIndex++; 
 	var currentQuestion = questionArray[questionIndex];
@@ -60,6 +61,7 @@ function onSubmit() {
 	var userInput = parseInt(input.val());
     if (userInput === currentAnswer ) {
 		banner.text(userInput + " is correct!");
+		banner.css("color", "#00FF00");
 		update(questionIndex);
 		input.val("");
 
@@ -81,6 +83,7 @@ start.on("click", function () { // Shows Question buttons
 		submit.fadeIn();
 		input.fadeIn();
 		start.hide();
+		reset.fadeIn();
 });	
 
 $("#reset").on("click", function(){
@@ -89,11 +92,27 @@ $("#reset").on("click", function(){
 	localStorage.removeItem("score");
 	localStorage.removeItem("questionsAnswered");
 	scoreDisplay.text("Score is set to " + score);
-	onReady();
+	// banner.hide();
+	// qfield.text("");
+	$(document).ready(function() {		//Hides Buttons and Show start.
+	$(".score").hide();
+	questionButton.hide();
+	reset.hide();
+	show.hide();
+	submit.hide();
+	input.hide();
+	start.fadeIn();
+	qfield.text("Hit Next to skip to the questions")
+});
 });
 					// Show hint to the question. 
-show.on("click", function(){     
-	return banner.text("Answer: " + currentHint);
+show.on("click", function(){ 
+	// qfield.addClass("blue");
+	return qfield.text("Answer: " + currentHint);
+	
+
+
+
 })
 
 
@@ -105,6 +124,7 @@ $(document).ready(function() {		//Hides Buttons and Show start.
 	submit.hide();
 	input.hide();
 	start.fadeIn();
+	qfield.text("Hit Next to skip to the questions")
 });
 
 

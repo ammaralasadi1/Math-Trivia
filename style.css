@@ -1,19 +1,21 @@
 body {
 	text-align: center;
-	font-family: 'Freckle Face', cursive;
+	font-family: 'Baloo Chettan', cursive;
 	font-size: 1em;
 	color: red;
-	text-shadow: 2px 2px white;
+	text-shadow: white;
 }
 header {
 	margin: 5px 0px 5px 0px;
 	font-size: 2em;
+	font-family: 'Freckle Face', cursive;
+	text-shadow: white 1px 1px;
 	
 }
 .container {
 	width: 1000px;
-	min-height: 400px;
-	max-height: 401px;
+	min-height: 500px;
+	max-height: 501px;
 	margin: 0 auto;
 	background-color: white;
 	border-radius: 20px;
@@ -21,9 +23,9 @@ header {
 }
 .banner {
 	margin: 0 auto;
-    font-size: 3em;
+    font-size: 1.5em;
     
-    height: 200px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,18 +34,19 @@ header {
 .scorepad {
 	margin: 0 auto;
     font-size: 3em;
-    height: 200px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #FFFF00;
 
 	
 
 }
 .question {
 	margin: 0 auto;
-    font-size: 3em;
-    height: 200px;
+    font-size: 2em;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,10 +76,11 @@ header {
 
 }
 
-#submit, #show, #start, #reset{
+#submit, #show, #start, #reset, #next {
 	margin: 0 auto;
 	padding: 10px;
-	background-color: #ffffcc;
+	background-color:#66ff99;
+	color: black;
 	font-size: 1em;
 	border-radius: 20px;
 	width: 100px;
@@ -85,10 +89,9 @@ header {
 }
 #result {
 	display: inline-block;
-
 	width: 30%;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -100,6 +103,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: 300px;
 	/*border-radius: 20px;*/
 	
 }
@@ -111,22 +115,35 @@ header {
 	background-color: white;
 	border-radius: 20px;
 	background-color: #262626;
-	/*background-image: url("9-580x326.png");*/
+
 }
 
 #start:hover {
-background: #6666ff;
+background:#00FF00;
 }
 
 #show:hover {
-background: #6666ff;
+background:#00FF00;
 }
 #submit:hover {
-background: #6666ff;
+background:#00FF00;
 }
 .questionButton:hover {
-background: #6666ff;
+background:#00FF00;
 }
+#reset:hover {
+	background:#00FF00;
+}
+#next:hover {
+background:#00FF00;
+}
+
+/*.red{
+	color:red;
+}
+.blue {
+    color: blue;
+}*/
 
 
 
