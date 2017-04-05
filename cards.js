@@ -4,7 +4,10 @@ var input  = $("#result")
 var submit = $("#submit");
 var start = $("#start");
 var show = $("#show");
+var reset = $("#reset")
 var questionButton = $(".questionButton");
+var scoreDisplay = $(".scorepad");
+
 
 var score = localStorage.score;
 if (score) score = parseInt(score); else score =0;
@@ -26,7 +29,7 @@ var currentHint;
 
 
 
-$("#result").keypress(function(event) { // 
+input.keypress(function(event) { // 
     if (event.which == 13) {
        event.preventDefault(); 
         onSubmit(); 
@@ -39,9 +42,8 @@ function update(id) { //A function to update the score
 		localStorage.setItem('score',score);
 		localStorage.setItem('questionsAnswered', questionsAnswered); 
 	}
-	$(".scorepad").text("Your score: " + score + " out of 7");
+	scoreDisplay.text("Your score: " + score + " out of 7");
 };
-
 
 $('#next').click(function() {
 	banner.empty();
@@ -58,16 +60,15 @@ function onSubmit() {
 	var userInput = parseInt(input.val());
     if (userInput === currentAnswer ) {
 		banner.text(userInput + " is correct!");
-		update(questionIndex); 
+		update(questionIndex);
+		input.val("");
 
 		} 
 	else {
 			return banner.text("Wrong Answer!");
+			input.val("");
 		}
 }
-
-
-
 
 
 
@@ -87,7 +88,8 @@ $("#reset").on("click", function(){
 	questionsAnswered = [];
 	localStorage.removeItem("score");
 	localStorage.removeItem("questionsAnswered");
-	banner.text("Score is set to " + score);
+	scoreDisplay.text("Score is set to " + score);
+	onReady();
 });
 					// Show hint to the question. 
 show.on("click", function(){     
@@ -95,16 +97,16 @@ show.on("click", function(){
 })
 
 
-
-
 $(document).ready(function() {		//Hides Buttons and Show start.
 	$(".score").hide();
 	questionButton.hide();
+	reset.hide();
 	show.hide();
 	submit.hide();
 	input.hide();
 	start.fadeIn();
 });
+
 
 
 

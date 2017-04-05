@@ -2,53 +2,57 @@ body {
 	text-align: center;
 	font-family: 'Freckle Face', cursive;
 	font-size: 1em;
-	background-color: #333333;
-	color: #ff0000;
+	color: red;
+	text-shadow: 2px 2px white;
 }
-
 header {
 	margin: 5px 0px 5px 0px;
-	font-size: 20px;
-	color: white;
+	font-size: 2em;
+	
 }
 .container {
-	
-	width: 800px;
-	min-height: 500px;
-	max-height: 501px;
+	width: 1000px;
+	min-height: 400px;
+	max-height: 401px;
 	margin: 0 auto;
-	/*border: 1px solid black;*/
-	/*box-shadow: 10px 10px 5px #888888;*/
-	background-color: #0033cc
+	background-color: white;
+	border-radius: 20px;
+	background-color: #262626;
 }
-
 .banner {
-	margin: 5px 0px 5px 0px;
-	padding: 20px;
-	font-size: 3em;
-	color: #ff0000;
+	margin: 0 auto;
+    font-size: 3em;
+    
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	
 }
 .scorepad {
-	padding: 20px;
-	font-size: 2em;
-	/*color: white*/
+	margin: 0 auto;
+    font-size: 3em;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+	
 
 }
 .question {
-	margin: 5px 0px 5px 0px;
-	min-height: 220px;
-	padding: 20px;
-	font-size: 2em;
-	/*color: white;*/
-
+	margin: 0 auto;
+    font-size: 3em;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
 .qButton {
 	margin: 5px 0px 5px 0px;
 	min-height: 30px;
-	padding: 20px;
+	padding: 5px;
 }
-
 .questionButton{
 	display: inline-block;
 	padding: 10px;
@@ -79,12 +83,11 @@ header {
 	height: 15px;
 	box-shadow: 5px 5px 5px #888888;
 }
-
 #result {
 	display: inline-block;
 
 	width: 30%;
-    background-color: #4dffa9
+    background-color: black;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -97,25 +100,21 @@ header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	/*border-radius: 20px;*/
 	
-
 }
-
 .score {
-	/*box-shadow: 10px 10px 5px #888888;*/
-
-	width: 800px;
-	height: 300px;
-	/*border: 1px solid black;*/
+	width: 1000px;
+	height: 400px;
 	margin: 20px;
-	/*border-radius: 50px;*/
 	align-content: center;
-	background-color: #0033cc
-
-
+	background-color: white;
+	border-radius: 20px;
+	background-color: #262626;
+	/*background-image: url("9-580x326.png");*/
 }
 
- #start:hover {
+#start:hover {
 background: #6666ff;
 }
 
