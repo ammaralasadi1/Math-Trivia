@@ -55,7 +55,7 @@ var questionArray = [{
 	question: "How many four cent postal cards are there in a dozen?",
 	answer: 12,
 	hint: "Dozen is 12"
-}]
+}, {question: "Reser "}]
 var questionIndex = -1;
 var currentAnswer;
 var currentHint;
