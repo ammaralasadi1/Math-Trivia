@@ -49,6 +49,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #FFFFF0
 }
 .qButton {
 	margin: 5px 0px 5px 0px;
