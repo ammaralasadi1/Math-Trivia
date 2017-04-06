@@ -82,7 +82,7 @@ header {
     border-radius: 20px;
     width: 100px;
     height: 15px;
-    /*box-shadow: 2px 2px 2px #888888;*/
+    
 }
 #submit {
     background: green;
@@ -103,7 +103,7 @@ header {
     flex-direction: column;
     align-items: center;
     height: 300px;
-    /*border-radius: 20px;*/
+    
 }
 .score {
     width: 1000px;
