@@ -1,49 +1,45 @@
 body {
-	text-align: center;
-	font-family: 'Baloo Chettan', cursive;
-	font-size: 1em;
-	color: red;
-	text-shadow: white;
+    background-image: url("images/4.jpg");
+    text-align: center;
+    font-family: 'Baloo Chettan', cursive;
+    font-size: 1em;
+    color: red;
+    
 }
 header {
-	margin: 5px 0px 5px 0px;
-	font-size: 2em;
-	font-family: 'Freckle Face', cursive;
-	text-shadow: white 1px 1px;
+    margin: 5px 0px 5px 0px;
+    font-size: 2em;
+    font-family: 'Freckle Face', cursive;
+    text-shadow: white 1px 1px;
 }
 .container {
-	width: 1000px;
-	min-height: 500px;
-	max-height: 501px;
-	margin: 0 auto;
-	background-color: white;
-	border-radius: 20px;
-	background-color: #262626;
+    width: 1000px;
+    min-height: 500px;
+    max-height: 501px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    background-color: #262626;
 }
 .banner {
-	margin: 0 auto;
-    font-size: 1.5em;
-    
+    margin: 0 auto;
+    font-size: 3em;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-	
 }
 .scorepad {
-	margin: 0 auto;
+    margin: 0 auto;
     font-size: 3em;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #FFFF00;
-
-	
-
 }
 .question {
-	margin: 0 auto;
+    margin: 0 auto;
     font-size: 2em;
     height: 300px;
     display: flex;
@@ -52,47 +48,48 @@ header {
     color: #FFFFF0
 }
 .qButton {
-	margin: 5px 0px 5px 0px;
-	min-height: 30px;
-	padding: 5px;
+    margin: 5px 0px 5px 0px;
+    min-height: 30px;
+    padding: 5px;
 }
-.questionButton{
-	display: inline-block;
-	padding: 10px;
-	background-color: #ffffcc;
-	font-size: 1em;
-	border-radius: 20px;
-	width: 60px;
-	height: 15px;
-	box-shadow: 5px 5px 5px #888888;
+.questionButton {
+    display: inline-block;
+    padding: 10px;
+    background-color: #ffffcc;
+    font-size: 1em;
+    border-radius: 20px;
+    width: 60px;
+    height: 15px;
+    box-shadow: 5px 5px 5px #888888;
 }
-
 .aButton {
-	margin: 5px 0px 5px 0px;
-	padding: 20px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-
+    margin: 5px 0px 5px 0px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-
-#submit, #show, #start, #reset, #next {
-	margin: 0 auto;
-	padding: 10px;
-	background-color:#cc8500;
-	color: black;
-	font-size: 1em;
-	border-radius: 20px;
-	width: 100px;
-	height: 15px;
-	/*box-shadow: 2px 2px 2px #888888;*/
+#submit,
+#show,
+#start,
+#reset,
+#next {
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #cc8500;
+    color: black;
+    font-size: 1em;
+    border-radius: 20px;
+    width: 100px;
+    height: 15px;
+    /*box-shadow: 2px 2px 2px #888888;*/
 }
-#submit{
-	background: green;
+#submit {
+    background: green;
 }
 #result {
-	display: inline-block;
-	width: 30%;
+    display: inline-block;
+    width: 30%;
     background-color: white;
     color: black;
     padding: 14px 20px;
@@ -101,53 +98,44 @@ header {
     border-radius: 20px;
     cursor: pointer;
 }
-
 .con_board {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 300px;
-	/*border-radius: 20px;*/
-	
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    /*border-radius: 20px;*/
 }
 .score {
-	width: 1000px;
-	height: 400px;
-	margin: 20px;
-	align-content: center;
-	background-color: white;
-	border-radius: 20px;
-	background-color: #262626;
-
+    width: 1000px;
+    height: 400px;
+    margin: 20px;
+    align-content: center;
+    background-color: white;
+    border-radius: 20px;
+    background-color: #262626;
 }
-
 #start:hover {
-background:#00FF00;
+    background: #00FF00;
 }
-
 #show:hover {
-background:#00FF00;
+    background: #00FF00;
 }
 #submit:hover {
-background:#00FF00;
+    background: #00FF00;
 }
 .questionButton:hover {
-background:#00FF00;
+    background: #00FF00;
 }
 #reset:hover {
-	background:#00FF00;
+    background: #00FF00;
 }
 #next:hover {
-background:#00FF00;
+    background: #00FF00;
 }
-
 footer {
-	margin: 5px 0px 5px 0px;
-	font-size: 2em;
-	font-family: 'Freckle Face', cursive;
-	text-shadow: white 1px 1px;
-	color: red;
+    margin: 5px 0px 5px 0px;
+    font-size: 2em;
+    font-family: 'Freckle Face', cursive;
+    text-shadow: white 1px 1px 1px;
+    color: red;
 }
-
-
-
