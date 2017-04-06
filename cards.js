@@ -77,7 +77,7 @@ function update(id) { // Updates score
 	}
 	scoreDisplay.text("Hey, your score is " + score + "/10");
 };
-$('#next').click(function() {
+$('#next').click(function() { // click next function
 	banner.empty();
 	questionIndex++;
 	var currentQuestion = questionArray[questionIndex];
@@ -87,7 +87,7 @@ $('#next').click(function() {
 });
 
 function onSubmit() {
-	var userInput = parseInt(input.val());
+	var userInput = parseInt(input.val()); //validation fuction and sound
 	if (userInput === currentAnswer) {
 		banner.text(userInput + " is correct!");
 		var bell = new Audio('sound/ff-bell.wav');
@@ -137,13 +137,14 @@ $("#reset").on("click", function() {
 		qfield.text("Hit Next to skip to the questions")
 	});
 });
-// Show hint to the question. 
-show.on("click", function() {
+												
+
+show.on("click", function() { // Show hint to the question. 
 	return qfield.text("Answer: " + currentHint);
 
 })
 
-$(document).ready(function() { //Hides Buttons and Show start.
+$(document).ready(function() { //Hides Buttons and Show start button.
 	$(".score").hide();
 	questionButton.hide();
 	reset.hide();
