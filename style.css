@@ -68,6 +68,9 @@ header {
     flex-direction: row;
     justify-content: center;
 }
+
+/*Maybe look into giving all of these elements some unified class name instead of
+having to list out all of their ids here separately*/
 #submit,
 #show,
 #start,
@@ -81,7 +84,7 @@ header {
     border-radius: 20px;
     width: 100px;
     height: 15px;
-    
+
 }
 #submit {
     background: green;
@@ -102,8 +105,9 @@ header {
     flex-direction: column;
     align-items: center;
     height: 300px;
-    
 }
+/*Good application of flex-box*/
+
 .score {
     width: 1000px;
     height: 400px;
