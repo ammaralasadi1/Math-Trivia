@@ -8,12 +8,21 @@ var reset = $("#reset")
 var questionButton = $(".questionButton");
 var scoreDisplay = $(".scorepad");
 
-var score = localStorage.score;
-if (score) score = parseInt(score);
-else score = 0;
+var score;
+if (localStorage.getItem('score')) {
+	score = parseInt(localStorage.getItem('score'));
+} else {
+	score = 0;
+}
+// Best practice is to always use parentheses and curly brackets with if / else statements in JS
+
 var questionsAnswered = localStorage.questionsAnswered;
-if (questionsAnswered) questionsAnswered = questionsAnswered.split(',');
-else questionsAnswered = [];
+if (questionsAnswered) {
+	questionsAnswered = questionsAnswered.split(',');
+} else {
+	questionsAnswered = [];
+}
+// Refer to this article for guidance on using localStorage: https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage
 
 var questionArray = [{
 	question: "8 + 2 = ?",
@@ -56,18 +65,24 @@ var questionArray = [{
 	answer: 12,
 	hint: "Dozen is 12"
 }]
+// Good use of data structures to organize your question / answer data
+
 var questionIndex = -1;
 var currentAnswer;
 var currentHint;
 
-input.keypress(function(event) { // 
+// Look into restructuring your code to list all variables together at the top, all
+// functions together in the middle, and all event listeners together at the bottom
+// (makes code more organized / readable)
+
+input.keypress(function(event) { //
 	if (event.which == 13) {
 		event.preventDefault();
 		onSubmit();
 	}
 });
 
-function update(id) { // Updates score 
+function update(id) { // Updates score
 	if (!questionsAnswered.includes(id)) {
 		questionsAnswered.push(id);
 		score++;
@@ -108,6 +123,8 @@ function onSubmit() {
 
 $("#submit").on('click', onSubmit);
 start.on("click", function() { // Shows Question buttons
+	// Maybe look into putting the DOM manipulation into a method that can be called here
+	// (makes it more reusable)
 	$(".score").fadeIn(1000);
 	questionButton.fadeIn();
 	show.fadeIn();
@@ -137,13 +154,14 @@ $("#reset").on("click", function() {
 		qfield.text("Hit Next to skip to the questions")
 	});
 });
-												
 
-show.on("click", function() { // Show hint to the question. 
-	return qfield.text("Answer: " + currentHint);
 
+show.on("click", function() { // Show hint to the question.
+	qfield.text("Answer: " + currentHint);
+	// You don't need a return here, since the DOM manipulation is a side effect
 })
 
+// Is this a repitition of the $(document).ready() above?
 $(document).ready(function() { //Hides Buttons and Show start button.
 	$(".score").hide();
 	questionButton.hide();
